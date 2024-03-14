@@ -1,0 +1,52 @@
+.doc_card1 {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: rgb(236, 236, 236) 10px -10px 0px -3px;
+    padding: 15px;
+    margin-bottom: 35px;
+}
+.card-text {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+}
+.card-text span {
+    color: #E01183;
+}
+.moods-text {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 120%;
+text-align: center;
+color: #414141;
+}
+.moods {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.moods-item {
+    text-align: center;
+    display: inline-block;
+}
+
+.inputs {
+    display: none;
+}
+.inputs:checked + label {
+    border: 2px solid #6691E0;
+    border-radius: 8px;
+    padding: 5px;
+}
+.label {
+    display: inline-block;
+	cursor: pointer;
+	position: relative;
+	user-select: none;
+}

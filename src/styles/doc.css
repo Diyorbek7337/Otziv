@@ -1,0 +1,242 @@
+.doctor h4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 24px 0;
+}
+
+.doctor .doc_card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: rgb(236, 236, 236) 10px -10px 0px -3px;
+    padding: 15px;
+}
+
+.doctor .doc_card .person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doctor .doc_card .person .people {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    background: #F7DB48;
+    position: relative;
+    overflow: hidden;
+}
+
+.doctor .doc_card .person .people img {
+    width: 100%;
+}
+
+.doctor .doc_card .person .name {
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 24px;
+    color: #414141;
+}
+
+.doctor .doc_card .person .name h3 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.doctor .doc_card .person .name p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.doctor .doc_card .person .name h5 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.doctor .doc_card .person .name h6 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.doctor .doc_card .rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.doctor .doc_card .rate h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #414141;
+}
+
+.doctor .doc_card .rate .star {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doctor .doc_card .rate .star p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #414141;
+    margin-left: 10px;
+}
+
+
+.form_card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: rgb(236, 236, 236) 10px -10px 0px -3px;
+    padding: 15px;
+}
+
+.form_card label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #414141;
+}
+.form_card input, .form_card textarea {
+    width: 100%;
+    border: 1px solid #CDCDCD;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.form_card input::placeholder {
+    color: #CDCDCD;
+}
+.form_card textarea {
+    min-height: 100px;
+    max-width: 100%;
+    min-width: 100%;
+    margin-top: 14px;
+}
+
+.form_card .num {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #CDCDCD;
+    margin: 12px 0;
+}
+form button {
+    background: #808CFF;
+    box-shadow: 7px -2px 12px rgba(201, 201, 201, 0.25);
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    width: 100%;
+    border: none;
+    padding: 14px 0;
+    margin: 20px 0;
+    cursor: pointer;
+}
+/* .button:hover {
+    background: #808CFF;
+    color: #FFFFFF;
+} */
+form button img {
+    margin-right: 10px;
+    width: 32px;
+    height: 18px;
+}
+
+.smile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+}
+
+.smile .card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 17px;
+    margin: 3px;
+    width: 100%;   
+    cursor: pointer;
+}
+.smile .card.active {
+    border: 3px solid #FFCB45;;
+}
+.smile .card h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #414141;
+    min-height: 40px;
+}
+.smile .card img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: 0.5s linear;
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.social {
+    font-size: 48px;
+    background: #FFFFFF;
+    box-shadow: 7px -2px 12px rgba(201, 201, 201, 0.25);
+    border-radius: 8px;
+    padding: 15px 15px 0 15px;
+}
+.social-item {
+    color: #808CFF;
+}
+@media (max-width: 370px) {
+    .smile .card {
+        padding: 12px;
+    }
+}
+@media (max-width: 340px) {
+    .smile .card {
+        padding: 10px;
+    }
+}
+@media (max-width: 315px) {
+    .smile .card {
+        padding: 5px;
+    }
+}

@@ -1,0 +1,57 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+.navbar a {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    padding: 12px 0;
+}
+.navbar a img {
+    width: 70%;
+}
+.navbar .language {
+    width: 13%;
+    position: relative;
+}
+.navbar .language .lang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .language .lang img  {
+    width: 24px;
+    height: 18px;
+}
+
+.navbar .language .lang h5 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #404040;
+}
+.langGroup {
+    display: none;
+    position: absolute;
+    backdrop-filter: blur(2px);
+    top: 20px;
+    left: -10px;
+    border-radius: 8px;
+    padding: 10px 10px 5px 10px;
+    background-color: rgba(255, 255, 255, 0.4)
+}
+.langGroup .lang img {
+    margin-right: 7px;
+}
+.langGroup.active {
+    display: block;
+}
+.langGroup .lang {
+    margin-bottom: 5px;
+}

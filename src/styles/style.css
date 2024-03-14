@@ -1,0 +1,37 @@
+@import './navbar.css';
+@import './doc.css';
+@import './rating.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background: #D2D2D2;
+}
+.App {
+    width: 414px;
+    min-height: 100vh;
+    background: linear-gradient(213.73deg, #808AFF 6.31%, #83DCF0 70.5%, #FBEDFF 102.6%);
+    margin: 0 auto;
+}
+
+.container {
+    padding: 0 24px;
+}
+.icon {
+    width: 20px;
+    margin: 0;
+}
+.icon1 {
+    width: 20px;
+    margin-top: 1px;
+}
+
+@media (max-width: 414px) {
+    .App {
+        width: 100%;
+    }
+}
