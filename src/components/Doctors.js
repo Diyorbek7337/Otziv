@@ -7,7 +7,7 @@ import send from '../image/send.png';
 import Smile from '../image/smile.png';
 import Cubic from '../image/cub.png';
 import Perfect from '../image/perfect.png';
-import Smile1 from '../image/smile1.png';
+import Smile1 from '../image/smile1.png'; 
 import Cubic1 from '../image/cub1.png';
 import Perfect1 from '../image/perfect1.png';
 import Rate from './Rate';
@@ -39,23 +39,18 @@ export default function Doctors({ image, job }) {
         rating: 0,
         skill: 0,
     })
-    // const success = () => {
-    //     Modal.success({
-    //       content: 'Bildirgan izohingiz uchun rahmat!',
-    //     });
-    //   };
+
     const { id } = useParams()
     const [smile, setSmile] = useState(false)
     const [anonim, setAnonim] = useState(false) 
     const [text, setText] = useState('')
     const [phone, setPhone] = useState('')
-    const [num, setNum] = useState (0)
+    const [num, setNum] = useState(0)
     const [card, setCard] = useState(false)
     const [card1, setCard1] = useState(false)
     const [card2, setCard2] = useState(false)
 
 
-    // const go = card ? (smile ? 'x': "q") : ''
 
 
     
