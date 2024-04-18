@@ -21,7 +21,7 @@ import { useTranslation } from 'react-i18next';
 // import {  Modal } from 'antd';
 // import 'antd/dist/antd.css'
 
-export default function Doctors({ image, job }) {
+export default function Doctors({ value }) {
     const { t } = useTranslation()
     const posts = {
         "62dbb9ce7f0052a731f9d291": t('doctor.jobNevrapatolog'),
@@ -38,6 +38,7 @@ export default function Doctors({ image, job }) {
         job: "",
         rating: 0,
         skill: 0,
+        image: ""
     })
     // const success = () => {
     //     Modal.success({
@@ -59,16 +60,17 @@ export default function Doctors({ image, job }) {
 
 
     
-      const serverHost = 'https://api.planbabyclinic.com';
+      const serverHost = 'https://shy-plum-alligator-yoke.cyclic.app/doc';
     const sendMessage = async (e) => {
         e.preventDefault();
-        let token = "5561478916:AAHykz5m-levphgIBg4-AkAG5-mLH02tQec"
-        let chatID = "-1001546332620";
-        let message = `<b>📬 Planbaby_Otziv</b>%0A<b>👤 Ismi: </b><i>${doc.name}</i>%0A<b>👤 Bahosi: </b><i>${num}</i>%0A<b>👤 Izoh: </b><i>${text}</i>%0A<b>👤 Doktor fe'li: </b><i>${card ? (smile ? t('doctor.doc1'): t('doctor.doc')) : '-'}</i>%0A<b>👤 Mutaxassis malakasi: </b><i>${card1 ? (smile ? t('doctor.exp'): t('doctor.notexp')) : '-'}</i>%0A<b>👤 Xizmat ko'rsatish: </b><i>${card2 ? (smile ? t('doctor.staff1'): t('doctor.staff')) : '-'}</i>${!anonim ? `%0A<b>📞 Tel raqami: </b><i>${phone}</i>` : ''}%0A<b> Anonimligi: </b><i>${anonim}</i>`;
+        let token = "7141886866:AAGw5nFcmlSXRY193t4xnLK75A3s3GqyuiQ"
+        let chatID = "-4170977532";
+        let message = `<b>📬 ProTech_Otziv</b>%0A<b>👤 Ismi: </b><i>${doc.name} ${doc.name2}</i>%0A<b>👤 Bahosi: </b><i>${num}</i>%0A<b>👤 Izoh: </b><i>${text}</i>%0A<b>👤 O'qituvchi muomilasi: </b><i>${card ? (smile ? t('doctor.doc1'): t('doctor.doc')) : '-'}</i>%0A<b>👤 O'qituvchi malakasi: </b><i>${card1 ? (smile ? t('doctor.exp'): t('doctor.notexp')) : '-'}</i>%0A<b>👤 Dars sifati: </b><i>${card2 ? (smile ? t('doctor.staff1'): t('doctor.staff')) : '-'}</i>${!anonim ? `%0A<b>📞 Tel raqami: </b><i>${phone}</i>` : ''}%0A<b> Anonimligi: </b><i>${anonim}</i>`;
         let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatID}&text=${message}&parse_mode=html`;
         let apibot = new XMLHttpRequest();
         apibot.open("GET", url, true);
-        sendRating(id, num)
+        sendRating(value, num);
+        setNum(0)
 
         if(text.length > 0 && (phone.length > 0 || anonim)) {
             apibot.send();
@@ -80,26 +82,29 @@ export default function Doctors({ image, job }) {
             setCard1(false)
             setCard2(false)
         }
+        console.log("ketdiii", num);
     }
 
     const getData = () => {
         axios
-            .get(`${serverHost}/doctor/${id}`)
+            .get(`${serverHost}/${value}`)
             .then(({data}) => {
                 setDoc({ 
-                    name: data.name,
+                    name: data.firstName,
+                    name2: data.lastName,
                     skill: data.skill,
                     job: data.job,
-                    rating: data.rating
+                    rating: data.rating,
+                    image: data.image
                  })
             })
     }
 
-    const sendRating = (id, rating) => {
+    const sendRating = (id, stars) => {
         axios
-            .put(`${serverHost}/doctor/`, {
-                _id: id,
-                rating
+            .put(`${serverHost}/rating`, {
+                id: id,
+                stars
             })
             .then((data) => {
                 console.log(data);
@@ -119,27 +124,27 @@ export default function Doctors({ image, job }) {
             <div className='doc_card'>
                 <div className='person'>
                     <div className='people'>
-                        <img src={image} alt='' />
+                        <img src={doc.image} alt='' />
                     </div>
                     <div className='name'>
-                        <h3>{doc.name}</h3>
-                        <p>{ posts[doc.job] }</p>
+                        <h3>{doc.name} {doc.name2}</h3>
+                        <p>{doc.job}</p>
                     </div>
                     <div className='name'>
                         <h5>{t('doctor.experience')}</h5>
-                        <h6>{doc.skill} {t('doctor.year')}</h6>
+                        <h6>{doc.skill}</h6>
                     </div>
                 </div>
                 <div className='rate'>
                     <h3>{t('doctor.rate')}</h3>
                     <div className='star'>
                         <Rating  
-                        initialRating={doc.rating}
+                        initialRating={(doc.rating.stars / doc.rating.num).toFixed(1)}
                         readonly
                         emptySymbol={<img src={EmptyStar} className="icon1" alt=''/>}
                         fullSymbol={<img src={Star} className="icon" alt=''/>}
                         />
-                        <p>{doc.rating}</p>
+                        <p>{(doc.rating.stars / doc.rating.num).toFixed(1)}</p>
                     </div>
                 </div>
             </div>
