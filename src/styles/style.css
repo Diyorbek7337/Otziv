@@ -14,7 +14,7 @@ body {
 .App {
     width: 414px;
     min-height: 100vh;
-    background: linear-gradient(213.73deg, #808AFF 6.31%, #83DCF0 70.5%, #FBEDFF 102.6%);
+    background-color: rgb(147, 200, 235);
     margin: 0 auto;
 }
 

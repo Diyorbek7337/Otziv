@@ -4,14 +4,24 @@
     align-items: center;
     background: #fff;
 }
-.navbar a {
+.navbar .logoBox {
     display: flex;
-    justify-content: flex-end;
-    width: 70%;
+    align-items: center;
+    gap: 5px;
+    font-family: 600;
     padding: 12px 0;
 }
-.navbar a img {
-    width: 70%;
+.logoItem {
+    width: 12%;
+}
+.logoItemWrite {
+    width: 30%;
+}
+.logoItemWrite img {
+    width: 100%;
+}
+.logo {
+    width: 100%;
 }
 .navbar .language {
     width: 13%;

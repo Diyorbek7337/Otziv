@@ -30,6 +30,9 @@
     position: relative;
     overflow: hidden;
 }
+.iconImg img {
+    width: 100%;
+}
 
 .doctor .doc_card .person .people img {
     width: 100%;

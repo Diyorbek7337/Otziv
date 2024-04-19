@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Cheskbox from './Cheskbox';
 import ReactInputMask from 'react-input-mask';
 import send from '../image/send.png';
-import Smile from '../image/smile.png';
+import Smile from '../image/lovepik-male-teacher-holding-a-book-png-image_401976432_wh1200-removebg-preview.png';
 import Cubic from '../image/cub.png';
 import Perfect from '../image/perfect.png';
 import Smile1 from '../image/smile1.png'; 
@@ -15,23 +15,24 @@ import Star from '../image/star.png.png'
 import EmptyStar from '../image/emptystar.png'
 import Rating from 'react-rating'
 import { FaInstagram } from 'react-icons/fa';
+import { FaStar } from "react-icons/fa";
+
 import { FaFacebook } from 'react-icons/fa';
 import { FaTelegram } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-// import {  Modal } from 'antd';
-// import 'antd/dist/antd.css'
+
 
 export default function Doctors({ value }) {
     const { t } = useTranslation()
-    const posts = {
-        "62dbb9ce7f0052a731f9d291": t('doctor.jobNevrapatolog'),
-        "62de5439e419cc5fafaebd7a": t('doctor.jobUzi'),
-        "62de5478e419cc5fafaebd7e": t('doctor.jobMassaj'),
-        "62de549ee419cc5fafaebd80": t('doctor.jobPediatr'),
-        "62de550bc61ee18b979a24a1": t('doctor.joblabarant'),
-        "62de53efe419cc5fafaebd78": t('doctor.jobginekolog'),
-        "62de53c5e419cc5fafaebd76": t('doctor.joburolog'),
-    }
+    // const posts = {
+    //     "62dbb9ce7f0052a731f9d291": t('doctor.jobNevrapatolog'),
+    //     "62de5439e419cc5fafaebd7a": t('doctor.jobUzi'),
+    //     "62de5478e419cc5fafaebd7e": t('doctor.jobMassaj'),
+    //     "62de549ee419cc5fafaebd80": t('doctor.jobPediatr'),
+    //     "62de550bc61ee18b979a24a1": t('doctor.joblabarant'),
+    //     "62de53efe419cc5fafaebd78": t('doctor.jobginekolog'),
+    //     "62de53c5e419cc5fafaebd76": t('doctor.joburolog'),
+    // }    
 
     const [ doc, setDoc ] = useState({
         name: "",
@@ -136,7 +137,7 @@ export default function Doctors({ value }) {
                         <Rating  
                         initialRating={(doc.rating.stars / doc.rating.num).toFixed(1)}
                         readonly
-                        emptySymbol={<img src={EmptyStar} className="icon1" alt=''/>}
+                        emptySymbol={<img src={EmptyStar} className="icon" alt=''/>                    }
                         fullSymbol={<img src={Star} className="icon" alt=''/>}
                         />
                         <p>{(doc.rating.stars / doc.rating.num).toFixed(1)}</p>
@@ -147,15 +148,21 @@ export default function Doctors({ value }) {
                 <Rate smile={smile} setSmile={setSmile} setNum={setNum} num={num}/>
                 <div className='smile'>
                     <div value={card} onClick={() => setCard(!card)} className={card ? 'card active' : 'card'} onChange={(e) => setCard(e.target.value)}>
-                        <img src={smile ? Smile : Smile1} alt='' />
+                        <div className='iconImg'>
+                            <img src={smile ? Smile : Smile1} alt='' />
+                        </div>
                         <h3>{smile ? t('doctor.doc1') : t('doctor.doc')}</h3>
                     </div>
                     <div value={card1} onClick={() => setCard1(!card1)} className={card1 ? 'card active' : 'card'} onChange={(e) => setCard1(e.target.value)}>
+                        <div className='iconImg'>
                         <img src={smile ? Cubic : Cubic1} alt='' />
+                        </div>
                         <h3>{smile ? t('doctor.exp') : t('doctor.notexp')}</h3>
                     </div>
                     <div value={card2} onClick={() => setCard2(!card2)} className={card2 ? 'card active' : 'card'} onChange={(e) => setCard2(e.target.value)}>
-                        <img src={smile ? Perfect : Perfect1} alt='' />
+                        <div className='iconImg'>
+                            <img src={smile ? Perfect : Perfect1} alt='' />
+                        </div>
                         <h3>{smile ? t('doctor.staff1') : t('doctor.staff')}</h3>
                     </div>
                 </div>
