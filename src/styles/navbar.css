@@ -3,13 +3,15 @@
     justify-content: space-between;
     align-items: center;
     background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    
 }
 .navbar .logoBox {
     display: flex;
     align-items: center;
     gap: 5px;
     font-family: 600;
-    padding: 12px 0;
+    padding: 15px 0;
 }
 .logoItem {
     width: 12%;
