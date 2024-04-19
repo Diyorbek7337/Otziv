@@ -6,8 +6,8 @@ import ReactInputMask from 'react-input-mask';
 import send from '../image/send.png';
 import Smile from '../image/lovepik-male-teacher-holding-a-book-png-image_401976432_wh1200-removebg-preview.png';
 import Cubic from '../image/cub.png';
-import Perfect from '../image/perfect.png';
-import Smile1 from '../image/smile1.png'; 
+import Perfect from '../image/alobilim.png';
+import Smile1 from '../image/angry.png'; 
 import Cubic1 from '../image/cub1.png';
 import Perfect1 from '../image/perfect1.png';
 import Rate from './Rate';
@@ -181,9 +181,9 @@ export default function Doctors({ value }) {
                 <button className='button'><img src={send} alt='' />{t('doctor.send')}</button>
             </form>
             <ul className='socials'>
-                <li className='social'><a href='https://www.facebook.com/PlanBaby_Clinic-100915072467517/'><FaFacebook className='social-item'/></a></li>
-                <li className='social'><a href='https://www.instagram.com/planbaby_clinic/'><FaInstagram className='social-item'/></a></li>
-                <li className='social'><a href='https://t.me/Planbaby_clinic'><FaTelegram className='social-item'/></a></li>
+                <li className='social'><a href='#'><FaFacebook className='fb'/></a></li>
+                <li className='social'><a href='https://www.instagram.com/protechaacademy'><FaInstagram className='insta'/></a></li>
+                <li className='social'><a href='https://t.me/ShurchiITCenter'><FaTelegram className='tg'/></a></li>
             </ul>
         </div>
     )
