@@ -35,7 +35,7 @@ function App() {
   // ])
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("https://shy-plum-alligator-yoke.cyclic.app/doc/")
+    fetch("https://shy-plum-alligator-yoke.cyclic.app/teacher/")
       .then((response) => response.json())
       .then((resData) => setData(resData))
       .catch((err) => console.log(err))
