@@ -56,7 +56,7 @@ export default function Doctors({ value }) {
 
 
     
-      const serverHost = 'https://shy-plum-alligator-yoke.cyclic.app/doc';
+      const serverHost = 'https://shy-plum-alligator-yoke.cyclic.app/teacher';
     const sendMessage = async (e) => {
         e.preventDefault();
         let token = "7141886866:AAGw5nFcmlSXRY193t4xnLK75A3s3GqyuiQ"
